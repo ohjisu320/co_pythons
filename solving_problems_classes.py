@@ -3,8 +3,8 @@ class Question_Answer:
     #함수가 인스턴스 메소드라면 첫 인자를 'self'로 줘야 대상이 되는 인스턴스가 정확히 무엇인지 확인
     #__init__()은 반드시 첫 번째 인수로 self를 지정
     def __init__(self, problems, correct_answers):
-        self.problems = problems    # hint self. 추가
-        self.correct_answers = correct_answers     # hint 뒤 self.correct_answers에서 self. 삭제
+        self.problems = problems    # hint - self. 추가
+        self.correct_answers = correct_answers     # hint - 뒤 self.correct_answers에서 self. 삭제
         
     def problems_main(self):
         problems_first = self.problems[1], self.problems[3], self.problems[5], self.problems[7]
@@ -12,7 +12,7 @@ class Question_Answer:
 
         list_results = []
         
-        for question in range(len(problems_first)):    # hint
+        for question in range(len(problems_first)):    # hint  - 범위 재설정
             question_a = problems_second[question]
             question_b = problems_first[question]
 
@@ -36,7 +36,7 @@ class Statistics:
         input_temp = [int(i) for i in input_temp]
         # 문제 당 점수
         score_temp = [10, 15, 10, 5]        # hint
-        self.score = 0               # hint
+        self.score = 0               # hint - self.추가
         pass
         # 점수 합계
         for i in range(len(input_temp)):
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     list_corrects = [2, 1, 1, 2]
 
 
-    question_answer = Question_Answer(list_problems, list_corrects)    # hint
+    question_answer = Question_Answer(list_problems, list_corrects)    # hint - correct_answers 자리에 변수 설정
     result = question_answer.problems_main()
 
     statistics = Statistics()
